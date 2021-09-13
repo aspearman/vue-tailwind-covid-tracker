@@ -7,13 +7,13 @@
       @click="clearCountryData"
       v-if="stats.Country"
       class="
-        bg-indigo-500
+        bg-blue-500
         text-white
         rounded
         p-3
         mt-10
         focus:outline-none
-        hover:bg-indigo-600
+        hover:bg-blue-600
       "
     >
       Clear Country
