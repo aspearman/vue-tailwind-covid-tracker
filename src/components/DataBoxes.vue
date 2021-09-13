@@ -5,11 +5,11 @@
       <h3 class="text-3xl text-blue-900 font-bold mb-4">Cases</h3>
       <div class="text-2xl mb-4">
         <span class="font-bold">New:</span>
-        {{ stats.NewConfirmed }}
+        {{ formatNumber(stats.NewConfirmed) }}
       </div>
       <div class="text-2xl mb-4">
         <span class="font-bold">Total:</span>
-        {{ stats.TotalConfirmed }}
+        {{ formatNumber(stats.TotalConfirmed) }}
       </div>
     </div>
 
@@ -18,11 +18,11 @@
       <h3 class="text-3xl text-blue-900 font-bold mb-4">Deaths</h3>
       <div class="text-2xl mb-4">
         <span class="font-bold">New:</span>
-        {{ stats.NewDeaths }}
+        {{ formatNumber(stats.NewDeaths) }}
       </div>
       <div class="text-2xl mb-4">
         <span class="font-bold">Total:</span>
-        {{ stats.TotalDeaths }}
+        {{ formatNumber(stats.TotalDeaths) }}
       </div>
     </div>
   </div>
@@ -35,6 +35,11 @@ export default defineComponent({
   name: "DataBoxes",
   props: {
     stats: String,
+  },
+  methods: {
+    formatNumber(num: number): string {
+      return new Intl.NumberFormat().format(num);
+    },
   },
 });
 </script>
