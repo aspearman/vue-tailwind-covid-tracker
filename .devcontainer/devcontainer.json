@@ -1,17 +1,17 @@
 {
-	"name": "Node.js, TypeScript, Vue and Tailwind CSS",
-	"build": {
-		"dockerfile": "Dockerfile",
-		"args": { 
-			"VARIANT": "16"
-		}
-	},
-	"settings": {},
-	"extensions": [
-		"dbaeumer.vscode-eslint",
-		"octref.vetur",
-		"bradlc.vscode-tailwindcss"
-	],
-	"postCreateCommand": "npm install",
-	"remoteUser": "node"
+  "name": "Node.js, TypeScript, Vue and Tailwind CSS",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "args": {
+      "VARIANT": "16"
+    }
+  },
+  "settings": {},
+  "extensions": [
+    "dbaeumer.vscode-eslint",
+    "octref.vetur",
+    "bradlc.vscode-tailwindcss"
+  ],
+  "postCreateCommand": "npm install",
+  "remoteUser": "node"
 }
